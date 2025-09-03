@@ -125,3 +125,65 @@
         <a href="peitelista.jpg" target="_blank">
             <img src="peitelista.jpg" alt="Peitelista">
         </a>
+    </div>
+</div>
+
+<div class="content" id="ota-yhteytta">
+    <h2>Ota yhteyttä</h2>
+    <form>
+        <label for="nimi">Nimi:</label>
+        <input type="text" id="nimi" name="nimi" required>
+
+        <label for="puhelin">Puhelinnumero:</label>
+        <input type="tel" id="puhelin" name="puhelin">
+
+        <label for="sahkoposti">Sähköpostiosoite:</label>
+        <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+        <label for="viesti">Viesti:</label>
+        <textarea id="viesti" name="viesti" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
+
+        <button type="submit">Lähetä lomake</button>
+        <button type="reset">Tyhjennä</button>
+    </form>
+</div>
+
+<footer>
+    <div class="contact-info">
+        <p>Enäjärven Saha Ky | Sahamaantie 55, 09120 Karjalohja</p>
+        <p>Puhelin: +358 400 470 766 | +358 443 552 735</p>
+        <p><a href="https://www.facebook.com/enajarvensaha/?ref=embed_page#" target="_blank">Facebook</a></p>
+    </div>
+</footer>
+
+<script>
+// Funktio päivittää nykyisen päivämäärän ja kellonajan
+function updateDateTime() {
+    var now = new Date();
+    var day = now.getDate();
+    var month = now.getMonth() + 1; // Kuukaudet alkavat nollasta
+    var year = now.getFullYear();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Lisää etunolla minuutteihin ja sekunteihin tarvittaessa
+    if (minutes < 10) minutes = '0' + minutes;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    // Muodosta päivämäärä- ja kellonaikamerkkijono
+    var datetimeString = 'Päivämäärä: ' + day + '.' + month + '.' + year + ' | Kellonaika: ' + hours + ':' + minutes + ':' + seconds;
+
+    // Päivitä päivämäärä- ja kellonaikanäyttö
+    document.getElementById("current-datetime").innerText = datetimeString;
+}
+
+// Päivitä päivämäärä ja kellonaika joka sekunti
+setInterval(updateDateTime, 1000);
+
+// Ensimmäinen kutsu, jotta kellonaika näkyy heti
+updateDateTime();
+</script>
+
+</body>
+</html>
