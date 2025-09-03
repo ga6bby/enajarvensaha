@@ -85,6 +85,6 @@ form button:hover {
 }
 /* FB & Kartta */
 .inline-link {
-    display: inline-block;  /* keeps them on the same line */
-    margin-right: 20px;    /* space between links */
+    display: inline-block;   /* keeps them on the same line */
+    margin-right: 20px;      /* space between links */
 }
