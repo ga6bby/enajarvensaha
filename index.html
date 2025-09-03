@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enäjärven Saha Ky</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1e5d9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #c8b7a6;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+        nav {
+            background-color: #8f7b6f;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            text-align: center;
+            margin: 40px 20px;
+        }
+        .datetime {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #c8b7a6;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+        .contact-info {
+            font-size: 14px;
+        }
+        /* Tuotteet-kuvat */
+        .product img {
+            width: 200px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #8f7b6f;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #6e5e54;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Enäjärven Saha Ky
+</header>
+
+<nav>
+    <a href="#tuotteet">Tuotteet</a>
+    <a href="#historia">Historia</a>
+    <a href="#ota-yhteytta">Ota yhteyttä</a>
+</nav>
+
+<div class="content">
+    <h2>Aukioloajat</h2>
+    <p>Enäjärven Saha palvelee 2023 alkaen maanantaista perjantaihin klo 09 - 15.</p>
+    
+    <div class="datetime" id="current-datetime">
+        <!-- Nykyinen päivämäärä ja kellonaika tulee tähän -->
+    </div>
+</div>
+
+<div class="content" id="tuotteet">
+    <h2>Tuotteet</h2>
+    <p>
+        Tuotelistassa on vain osa valikoimastamme, lisää tuotekuvia Facebook-sivuillamme. <br>
+        Valikoimamme on laaja ja pystymme toimittamaan mittatilaustyönä lähes minkälaista tahansa puutavaraa asiakkaan toiveiden mukaisesti. <br>
+        Nyt myös mahdollista tilata INSTA 142 -standardin (SFS 5878) mukainen rakennesahatavaran lujuusluokittelu palveluna. <br>
+        Yhteydenotot puhelimitse, tai yhteydenottolomakkeen kautta.
+    </p>
+
+    <div class="product">
+        <p><strong>Tässä on yksi tuotteista</strong></p>
+        <h3>Peitelista</h3>
+        <p>Saatavilla esimerkiksi koossa: 12x42mm</p>
+        <a href="peitelista.jpg" target="_blank">
+            <img src="peitelista.jpg" alt="Peitelista">
+        </a>
+    </div>
+</div>
+
+<div class="content" id="ota-yhteytta">
+    <h2>Ota yhteyttä</h2>
+    <form>
+        <label for="nimi">Nimi:</label>
+        <input type="text" id="nimi" name="nimi" required>
+
+        <label for="puhelin">Puhelinnumero:</label>
+        <input type="tel" id="puhelin" name="puhelin">
+
+        <label for="sahkoposti">Sähköpostiosoite:</label>
+        <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+        <label for="viesti">Viesti:</label>
+        <textarea id="viesti" name="viesti" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
+
+        <button type="submit">Lähetä lomake</button>
+        <button type="reset">Tyhjennä</button>
+    </form>
+</div>
+
+<footer>
+    <div class="contact-info">
+        <p>Enäjärven Saha Ky | Sahamaantie 55, 09120 Karjalohja</p>
+        <p>Puhelin: +358 400 470 766 | +358 443 552 735</p>
+        <p><a href="https://www.facebook.com/enajarvensaha/?ref=embed_page#" target="_blank">Facebook</a></p>
+    </div>
+</footer>
+
+<script>
+// Funktio päivittää nykyisen päivämäärän ja kellonajan
+function updateDateTime() {
+    var now = new Date();
+    var day = now.getDate();
+    var month = now.getMonth() + 1; // Kuukaudet alkavat nollasta
+    var year = now.getFullYear();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Lisää etunolla minuutteihin ja sekunteihin tarvittaessa
+    if (minutes < 10) minutes = '0' + minutes;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    // Muodosta päivämäärä- ja kellonaikamerkkijono
+    var datetimeString = 'Päivämäärä: ' + day + '.' + month + '.' + year + ' | Kellonaika: ' + hours + ':' + minutes + ':' + seconds;
+
+    // Päivitä päivämäärä- ja kellonaikanäyttö
+    document.getElementById("current-datetime").innerText = datetimeString;
+}
+
+// Päivitä päivämäärä ja kellonaika joka sekunti
+setInterval(updateDateTime, 1000);
+
+// Ensimmäinen kutsu, jotta kellonaika näkyy heti
+updateDateTime();
+</script>
+
+</body>
+</html>
