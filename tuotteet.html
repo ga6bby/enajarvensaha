@@ -50,6 +50,22 @@
     color: #bbb;
     text-decoration: none;
 }
+
+/* Optional: center the image container text */
+.product-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#peitelista-img {
+    cursor: pointer;
+    width: 200px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
 </style>
 </head>
 <body>
@@ -78,8 +94,8 @@
     <div class="product">
         <h3>Peitelista</h3>
         <p>Saatavilla esimerkiksi koossa: 12x42mm</p>
-        <p style="text-align:center; font-weight:bold; margin-bottom:5px;">Peitelista</p>
-        <img id="peitelista-img" src="images/peitelista.jpg" alt="Peitelista" style="cursor:pointer; width:200px; border:1px solid #555; border-radius:5px; display:block; margin:auto;">
+        <div class="product-title">Peitelista</div>
+        <img id="peitelista-img" src="images/peitelista.jpg" alt="Peitelista">
 
         <!-- Modal -->
         <div id="peitelista-modal" class="modal">
