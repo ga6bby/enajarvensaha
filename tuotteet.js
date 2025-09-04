@@ -9,13 +9,13 @@ var productsData = [
 
     // Kattolistat
     { name: "Kattolista", img: "images/Kattolista.png", desc: "34 x 170mm", category: "kattolistat" },
-    { name: "Kattolista 2", img: "images/Kattolista2.png", desc: "15 x 40mm", category: "kattolistat" },
-    { name: "Kattolista 3", img: "images/Kattolista3.png", desc: "15 x 45mm", category: "kattolistat" },
-    { name: "Kattolista 4", img: "images/Kattolista4.png", desc: "15 x 70mm", category: "kattolistat" },
-    { name: "Kattolista 5", img: "images/Kattolista5.png", desc: "15 x 65mm", category: "kattolistat" },
-    { name: "Kattolista 6", img: "images/Kattolista6.png", desc: "15 x 62mm", category: "kattolistat" },
-    { name: "Kattolista 7", img: "images/Kattolista7.png", desc: "21 x 95mm", category: "kattolistat" },
-    { name: "Kattolista 8", img: "images/Kattolista8.png", desc: "21 x 120mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista2.png", desc: "15 x 40mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista3.png", desc: "15 x 45mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista4.png", desc: "15 x 70mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista5.png", desc: "15 x 65mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista6.png", desc: "15 x 62mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista7.png", desc: "21 x 95mm", category: "kattolistat" },
+    { name: "Kattolista", img: "images/Kattolista8.png", desc: "21 x 120mm", category: "kattolistat" },
 
     // Peitelistat & Jalkalistat
     { name: "Koriste L-lista (ankka)", img: "images/Koriste L-lista (ankka).png", desc: "21 x 40mm", category: "peitelistat" },
